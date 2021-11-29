@@ -16,6 +16,16 @@ namespace FlaviusJosephusTask
         /// <returns>The sequence of executions.</returns>
         public static IEnumerable<int> Solve(int n, int k)
         {
+            if (n < 0)
+            {
+                throw new ArgumentException("The number of elements cannot be less than 2");
+            }
+
+            if (k < 2)
+            {
+                throw new ArgumentException("The count for each step cannot be less than 2");
+            }
+
             List<int> circle = new List<int>();
 
             for (int i = 1; i <= n; i++)
